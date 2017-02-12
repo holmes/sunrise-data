@@ -20,7 +20,7 @@ fun main(args: Array<String>) {
     val day = currentDate.dayOfMonth
 
     val targetURL = "http://api.sunrise-sunset.org/json?lat=$lat&lng=$lon&date=$year-$month-$day&formatted=0"
-    val file = OutputStreamWriter(FileOutputStream("$year-$month-$day.json"))
+    val file = OutputStreamWriter(FileOutputStream("data/$year-$month-$day.json"))
 
     val connection = URL(targetURL).openConnection()
     val reader = BufferedReader(InputStreamReader(connection.getInputStream()))
